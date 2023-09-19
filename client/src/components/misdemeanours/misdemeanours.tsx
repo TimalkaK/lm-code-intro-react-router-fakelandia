@@ -3,6 +3,7 @@ import { Misdemeanour } from "../../types/misdemeanours.types";
 import { CitizenIdList } from "./citizenIdList";
 import { MisdemeanourList } from "./misdemeanourList";
 import { DateList } from "./dateList";
+import { PunishmentIdea } from "./punishmentIdea";
 
 export const MisdemeanourContext = createContext<Misdemeanour>({
     citizenId: 5674,
@@ -39,6 +40,7 @@ export const Misdemeanours : React.FC = () => {
             <CitizenIdList />
             <DateList />
             <MisdemeanourList />     
+            <PunishmentIdea />
             </MisdemeanourContext.Provider>
         </div>
     )
