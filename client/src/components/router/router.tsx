@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import {Home} from './home';
-import {Confession} from './confession';
-import {Misdemeanour} from './misdemeanour';
-import { NotFound } from "./notFound";
-import { MainLayout } from "./mainLayout";
+import {Home} from '../home';
+import {Confession} from '../confession';
+import {Misdemeanour} from '../misdemeanour';
+import { NotFound } from "../notFound";
+import { MainLayout } from "../mainLayout/mainLayout";
 
 
 const Router : React.FC = () => (
