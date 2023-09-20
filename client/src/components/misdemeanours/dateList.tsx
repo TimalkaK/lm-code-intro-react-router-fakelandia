@@ -6,6 +6,6 @@ export const DateList: React.FC = () => {
 return(
 	<div>
 		<h3>Date</h3>
-		{JSON.stringify(misdemeanourData)}
+		<ul><li>{JSON.stringify(misdemeanourData)}</li></ul>
 		</div>
 	)};

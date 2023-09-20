@@ -8,6 +8,6 @@ const misdemeanourData = useContext(MisdemeanourContext);
 return(
 <div>
   <h3>Citizen ID</h3>
-  {JSON.stringify(misdemeanourData)}
+  <ul><li>{JSON.stringify(misdemeanourData)}</li></ul>
   </div>
 )};

@@ -6,14 +6,14 @@ export const MisdemeanourList: React.FC = () => {
 
 	return (
 	<div>
+		<select name="misdemeanourFilter" id="misdemeanourFilter">
+    <option value="Filter" selected>Filter</option>
+    <option value="View">View 1</option>
+		<option value="ViewAll">View All</option>
+		</select>
 		<h3>Misdemeanours</h3>
-		{JSON.stringify(misdemeanourData)}
+		<ul><li>{JSON.stringify(misdemeanourData)}</li></ul>
 		</div>
 )};
 
 
-/*<select name="misdemeanourFilter" id="misdemeanourFilter">
-    <option value="Filter" selected>Filter</option>
-    <option value="View1">View 1</option>
-		<option value="ViewAll">View All</option>
-		</select>*/
