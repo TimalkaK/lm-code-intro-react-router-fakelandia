@@ -17,7 +17,6 @@ export const ConfessionForm : React.FC = () => {
       </select><br/>
       <textarea name="details" id="details" rows={4} cols={40}></textarea><br/>
       <button disabled={true}>Confess</button>
-
     </form>
 )
 }
