@@ -1,24 +1,24 @@
-import { SelectHTMLAttributes, useContext } from 'react';
+import { useContext, useState } from 'react';
 import { MisdemeanourContext } from './misdemeanours';
+import { Misdemeanour } from "../../types/misdemeanours.types";
+import { ValuesList } from './valuesList';
 
 
 export const MisdemeanourList: React.FC = () => {
 	const misdemeanourData = useContext(MisdemeanourContext);
 
+	const [filteredList, setFilteredList] = useState<Array<Misdemeanour>>(misdemeanourData);
+
 	const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
 		let value = event.target.value;
 		if (value === "rudeness" || value === "vegetables" || value === "lift" || value === "united"){
-			console.log("a misdemeanour");
-			// filter the array
 			const filter = misdemeanourData.filter(m => {
 				return m.misdemeanour === value;
 			})
-			console.log(filter);
-
-		}else{
-			console.log(value);
-		}
-	}
+			setFilteredList(filter);
+	}else{
+			setFilteredList(misdemeanourData);
+	}}
 
 
 	return (
@@ -42,20 +42,11 @@ export const MisdemeanourList: React.FC = () => {
 			<th>Date</th>
 			<th>Misdemeanours</th>
 			<th>Punishment Idea</th>
-			</tr>          
-			{misdemeanourData.map(m => {
-			return (
-			<tr>
-			<td>{m.citizenId}</td>
-			<td>{m.date}</td>
-			<td>{m.misdemeanour}</td>
-			<td><img alt='random punishment idea' src="https://picsum.photos/120/120"></img></td>
-			</tr>
-			)
+			</tr>  
+			{filteredList.map(m => {
+				return(<ValuesList citizenID={m.citizenId} date={m.date} misdemeanour={m.misdemeanour}/>)
 			})}
 	</table> 
 
 	</div>
-)};
-
-
+)}

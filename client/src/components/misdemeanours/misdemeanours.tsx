@@ -1,7 +1,6 @@
 import { useEffect, useState, createContext } from "react";
 import { Misdemeanour } from "../../types/misdemeanours.types";
 import { MisdemeanourList } from "./misdemeanourList";
-import { PunishmentIdea } from "./punishmentIdea";
 
 export const MisdemeanourContext = createContext<Array<Misdemeanour>>([{
     citizenId: 5674,
