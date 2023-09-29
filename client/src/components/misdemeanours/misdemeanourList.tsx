@@ -1,20 +1,42 @@
-import { useContext } from 'react';
+import { SelectHTMLAttributes, useContext } from 'react';
 import { MisdemeanourContext } from './misdemeanours';
 
 
 export const MisdemeanourList: React.FC = () => {
 	const misdemeanourData = useContext(MisdemeanourContext);
 
+	const handleChange = (event: React.ChangeEvent<HTMLSelectElement>) =>{
+		let value = event.target.value;
+		if (value === "rudeness" || value === "vegetables" || value === "lift" || value === "united"){
+			console.log("a misdemeanour");
+			// filter the array
+			const filter = misdemeanourData.filter(m => {
+				return m.misdemeanour === value;
+			})
+			console.log(filter);
+
+		}else{
+			console.log(value);
+		}
+	}
+
+
 	return (
 	<div>
-
-		<select name="misdemeanourFilter" id="misdemeanourFilter">
-    <option value="Filter" selected>Filter</option>
-    <option value="View">View 1</option>
-		<option value="ViewAll">View All</option>
-		</select>
-
 	<table>
+			<tr>
+			<td></td>
+			<td></td>
+			<select name="misdemeanourFilter" id="misdemeanourFilter" defaultValue="Filter" onChange={handleChange}>
+				<option value="Filter">Filter</option>
+				<option value="ViewAll">View All</option>
+				<option value="rudeness">Rudeness</option>
+				<option value="vegetables">Vegetables</option>
+				<option value="lift">Lift</option>
+				<option value="united">United</option>
+			</select>
+			<td></td>
+			</tr>
 			<tr>
 			<th>Citizen ID</th>
 			<th>Date</th>
