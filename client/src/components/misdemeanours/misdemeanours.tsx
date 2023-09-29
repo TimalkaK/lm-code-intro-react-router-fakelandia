@@ -6,7 +6,7 @@ import { PunishmentIdea } from "./punishmentIdea";
 export const MisdemeanourContext = createContext<Array<Misdemeanour>>([{
     citizenId: 5674,
     misdemeanour: "rudeness",
-    date: "19/09/2023"
+    date: "19/09/2023",
 }])
 
 export const Misdemeanours : React.FC = () => {
