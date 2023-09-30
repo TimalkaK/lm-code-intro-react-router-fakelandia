@@ -1,10 +1,5 @@
 export const ConfessionForm : React.FC = () => {
 
-  const validate = () => {
-    
-
-  }
-
 
   return (
     <form>
