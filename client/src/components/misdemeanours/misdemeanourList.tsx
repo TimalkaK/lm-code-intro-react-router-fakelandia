@@ -43,8 +43,8 @@ export const MisdemeanourList: React.FC = () => {
 			<th>Misdemeanours</th>
 			<th>Punishment Idea</th>
 			</tr>  
-			{filteredList.map(m => {
-				return(<ValuesList citizenID={m.citizenId} date={m.date} misdemeanour={m.misdemeanour}/>)
+			{filteredList.map(f => {
+				return(<ValuesList citizenID={f.citizenId} date={f.date} misdemeanour={f.misdemeanour}/>)
 			})}
 	</table> 
 
