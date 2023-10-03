@@ -24,9 +24,11 @@ export const MisdemeanourList: React.FC = () => {
 	return (
 	<div>
 	<table>
+		<tbody>
 			<tr>
 			<td></td>
 			<td></td>
+			<td>
 			<select name="misdemeanourFilter" id="misdemeanourFilter" defaultValue="Filter" onChange={handleChange}>
 				<option value="Filter">Filter</option>
 				<option value="ViewAll">View All</option>
@@ -35,6 +37,7 @@ export const MisdemeanourList: React.FC = () => {
 				<option value="lift">Lift</option>
 				<option value="united">United</option>
 			</select>
+			</td>
 			<td></td>
 			</tr>
 			<tr>
@@ -44,8 +47,9 @@ export const MisdemeanourList: React.FC = () => {
 			<th>Punishment Idea</th>
 			</tr>  
 			{filteredList.map(f => {
-				return(<ValuesList citizenID={f.citizenId} date={f.date} misdemeanour={f.misdemeanour}/>)
+				return(<ValuesList key={f.citizenId} citizenID={f.citizenId} date={f.date} misdemeanour={f.misdemeanour}/>)
 			})}
+			</tbody>
 	</table> 
 
 	</div>
