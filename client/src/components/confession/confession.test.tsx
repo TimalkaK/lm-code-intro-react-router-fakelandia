@@ -1,8 +1,10 @@
 
-//the form is appearing on the page 
+describe('Confession form', () => {
+  test('form is appearing on the page', () => {});
 
-//button is enabled correctly
+  test('Confess button is enabled correctly', () => {});
 
-//button is disabled correctly
+  test('Confess button is disabled correctly', () => {});
 
-//validation is working properly 
+  test('Validate component is appearing on the page', () => {});
+});

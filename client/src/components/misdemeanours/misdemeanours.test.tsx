@@ -1,4 +1,4 @@
-//are all the components appearing on the page
 
-//does the filter update the list when an option is chosen 
-
+describe('Misdemeanours Page', () => {
+  test('Misdemeanours component is appearing on the page', () => {});
+});
