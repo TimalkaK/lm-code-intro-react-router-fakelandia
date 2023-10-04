@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import { Validate } from "./validate";
 import { SubmitResponse } from "./submitResponse";
 import useMisdemeanours from "../../useMisdemeanours";
@@ -81,8 +81,7 @@ return(
       <label htmlFor='subject'>Subject:</label>
       <input type="text" name="subject" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)}></input><br/>
       <label htmlFor='reason'>Reason for contact:</label>
-      <select id='reason' name='reason ' value={reason}
-        onChange={handleChange}> 
+      <select id='reason' name='reason ' value={reason} onChange={handleChange}> 
         <option value="just-talk">I just want to talk</option>
         <option value="rudeness">Confessing to mild public rudeness</option>
         <option value="vegetables">Confessing to not eating vegetables</option>
