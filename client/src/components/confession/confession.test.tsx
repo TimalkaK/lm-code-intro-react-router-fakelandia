@@ -1,6 +1,12 @@
+import { Confession } from "./confession";
+import { render, screen } from '@testing-library/react';
 
 describe('Confession form', () => {
-  test('form is appearing on the page', () => {});
+  test('Form is rendering on the page', () => {
+    render(<Confession/>);
+    const form = screen.getByRole("form");
+    expect(form).toBeInTheDocument();
+  });
 
   test('Confess button is enabled correctly', () => {});
 

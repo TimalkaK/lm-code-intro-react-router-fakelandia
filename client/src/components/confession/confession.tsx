@@ -77,7 +77,7 @@ return(
 <p>It's very difficult to catch people committing misdemeanours so we appreciate it when citizens confess to us directly.</p>    
 <p>However, if you are having a hard day and need to vent then you're welcome to contact us here too. Up to you!</p>
 
-<form onSubmit={handleSubmit}>
+<form name="form" onSubmit={handleSubmit}>
       <label htmlFor='subject'>Subject:</label>
       <input type="text" name="subject" id="subject" value={subject} onChange={(e) => setSubject(e.target.value)}></input><br/>
       <label htmlFor='reason'>Reason for contact:</label>
