@@ -22,7 +22,7 @@ export const MisdemeanourList: React.FC = () => {
 
 
 	return (
-	<div>
+	<section className='misdemeanours'>
 	<table>
 		<tbody>
 			<tr>
@@ -51,6 +51,6 @@ export const MisdemeanourList: React.FC = () => {
 			})}
 			</tbody>
 	</table> 
+	</section>
 
-	</div>
 )}

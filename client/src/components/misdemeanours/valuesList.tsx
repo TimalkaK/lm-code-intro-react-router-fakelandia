@@ -1,10 +1,10 @@
-export interface ValuesListProp{
-  citizenID: number | null;
+export interface ValuesListProps{
+  citizenID: number;
   date: string;
   misdemeanour: string;
 }
 
-export const ValuesList: React.FC<ValuesListProp> = (props) => {
+export const ValuesList: React.FC<ValuesListProps> = (props) => {
   return(
     <tr>
     <td>{props.citizenID}</td>
